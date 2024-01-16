@@ -16,16 +16,22 @@ export default function Education({data, submitEducation}){
         <section className="educationForm">
             <h2>Education</h2>
             <form onSubmit={handleSubmit}>
-            
-            <input type="text" placeholder="Degree" defaultValue={data.degree.name} name="name"></input>
-            <input type="text" placeholder="School" defaultValue={data.degree.school} name="school"></input>
-            <input type="date" placeholder="Start year" defaultValue={data.degree.end} name="end"></input>
-            <input type="date" placeholder="Graduation year" defaultValue={data.degree.start} name="start"></input>
-            <input type="submit"></input>
+            <label htmlFor="degreeName">Degree</label>
+            <input type="text" defaultValue={data.degree.name} name="name" id="degreeName"></input>
+            <label htmlFor="school">School Name</label>
+            <input type="text" defaultValue={data.degree.school} name="school" id="school"></input>
+            <label htmlFor="startSchool">Start date</label>
+            <input type="date" defaultValue={data.degree.end} name="end" id="startSchool"></input>
+            <label htmlFor="endSchool">Graduation Year</label>
+            <input type="date" defaultValue={data.degree.start} name="start" id="endSchool"></input>
+            <input type="submit" value="Submit"></input>
             </form>
         </section>
     )
     return (
+        <section className="educationForm">
+        <h2>Education</h2>
         <button onClick={editHandler}>Edit</button>
+        </section>
     )
 }

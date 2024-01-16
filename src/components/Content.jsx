@@ -3,6 +3,7 @@ import RenderInfo from "./LiveCV"
 import { useState } from "react";
 import Education from "./Education";
 import Experience from "./Experience";
+import '../styles.css';
 
 export default function Content(){
     const [data, setData] = useState({
@@ -78,9 +79,11 @@ export default function Content(){
 
     return (
         <div className="content">
+        <section className="forms">
         <PersonalInfo data={data} submitPersonalInfo={submitPersonalInfo}/>
         <Education data={data} submitEducation={submitEducation}/>
         <Experience data={data} submitExperience={submitExperience}/>
+        </section>
         <RenderInfo data={data}/>
         </div>
     )

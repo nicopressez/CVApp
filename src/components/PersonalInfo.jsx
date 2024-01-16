@@ -21,12 +21,12 @@ export default function PersonalInfo({
     <section className="personalInfo">
         <h2>Personal info</h2>
         <form onSubmit={handleSubmit}>
-     <label>Name</label>
-     <input type="text" defaultValue={data.name} name="name" required></input>
-     <label>Email address</label>
-     <input type="email" defaultValue={data.email} name="email" required></input>
-     <label>Phone Number</label>
-     <input type="tel" defaultValue={data.phone} name="phone" required></input>
+     <label htmlFor="name">Name</label>
+     <input type="text" defaultValue={data.name} name="name" required id="name"></input>
+     <label htmlFor="email">Email address</label>
+     <input type="email" defaultValue={data.email} name="email" required id="email"></input>
+     <label htmlFor="phone">Phone Number</label>
+     <input type="tel" defaultValue={data.phone} name="phone" required id="phone"></input>
      <input type="submit" value="Submit"></input>
      </form >
     </section>
@@ -34,6 +34,7 @@ export default function PersonalInfo({
 
     return (
         <section className="personalInfo">
+            <h2>Personal info</h2>
             <button onClick={onEditHandler}>Edit</button>
         </section>
     )
