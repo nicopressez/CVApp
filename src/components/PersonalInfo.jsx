@@ -1,5 +1,4 @@
 import { useState } from "react";
-import RenderInfo from "./LiveCV";
 
 export default function PersonalInfo({
     data, 
