@@ -14,10 +14,13 @@ export default function Education({data, submitEducation}){
 
     if (!sent) return (
         <section className="educationForm">
+            <h2>Education</h2>
             <form onSubmit={handleSubmit}>
-            <input type="number" placeholder="Graduation year" defaultValue={data.degree.year} name="year"></input>
+            
             <input type="text" placeholder="Degree" defaultValue={data.degree.name} name="name"></input>
             <input type="text" placeholder="School" defaultValue={data.degree.school} name="school"></input>
+            <input type="date" placeholder="Start year" defaultValue={data.degree.end} name="end"></input>
+            <input type="date" placeholder="Graduation year" defaultValue={data.degree.start} name="start"></input>
             <input type="submit"></input>
             </form>
         </section>

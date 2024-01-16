@@ -19,11 +19,15 @@ export default function PersonalInfo({
 
     if (!sent) return (
     <section className="personalInfo">
+        <h2>Personal info</h2>
         <form onSubmit={handleSubmit}>
-     <input placeholder="Name" type="text" defaultValue={data.name} name="name"></input>
-     <input placeholder="Email address" type="email" defaultValue={data.email} name="email" ></input>
-     <input placeholder="Phone Number" type="tel" defaultValue={data.phone} name="phone"></input>
-     <input type="submit" value="submit"></input>
+     <label>Name</label>
+     <input type="text" defaultValue={data.name} name="name" required></input>
+     <label>Email address</label>
+     <input type="email" defaultValue={data.email} name="email" required></input>
+     <label>Phone Number</label>
+     <input type="tel" defaultValue={data.phone} name="phone" required></input>
+     <input type="submit" value="Submit"></input>
      </form >
     </section>
     )
